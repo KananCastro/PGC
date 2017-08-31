@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="root_pane" minHeight="0.0" minWidth="200.0" prefHeight="480.0" prefWidth="900.0" stylesheets="@application.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane fx:id="base_pane" dividerPositions="0.18262411347517732, 0.5" layoutY="-78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="371.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <ScrollPane fitToHeight="true" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="100.0">
+               <padding>
+                  <Insets left="8.0" top="6.0" />
+               </padding>
+               <content>
+                  <VBox fx:id="left_pane" spacing="10.0" />
+               </content></ScrollPane>
+            <ScrollPane prefHeight="478.0" prefWidth="636.0">
+               <content>
+                  <AnchorPane fx:id="structure_pane" prefHeight="478.0" prefWidth="636.0">
+                     <children>
+                        <AnchorPane fx:id="right_pane" prefHeight="478.0" prefWidth="636.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ImageView fx:id="lixeira" fitHeight="80.0" fitWidth="80.0" layoutX="550.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@trash_can.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0">
+               <content>
+                  <VBox prefHeight="250.0" prefWidth="150.0" spacing="10">
+                     <children>
+                        <Label text="ID:" />
+                        <TextField id="id" fx:id="id" prefWidth="150.0" />
+                        <Label text="Ordem:" />
+                        <TextField id="num" fx:id="num" prefWidth="150.0" />
+                        <Label text="Tipo:" />
+                        <TextField id="tipo" fx:id="tipo" prefWidth="150.0" />
+                        <Label text="Nome:" />
+                        <TextField id="nome" fx:id="nome" prefWidth="150.0" />
+                        <Label text="Valor:" />
+                        <TextField id="valor" fx:id="valor" prefWidth="150.0" />
+                        <Button fx:id="atualizar" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Button" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>

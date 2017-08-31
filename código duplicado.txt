@@ -1,0 +1,48 @@
+
+        this.setOnDragDone(new EventHandler<DragEvent>() {
+
+            @Override
+            public void handle(DragEvent event) {
+
+                right_pane.removeEventHandler(DragEvent.DRAG_OVER, mIconDragOverRightPane);
+                right_pane.removeEventHandler(DragEvent.DRAG_DROPPED, mIconDragDropped);
+                base_pane.removeEventHandler(DragEvent.DRAG_OVER, mIconDragOverRoot);
+
+                mDragOverIcon.setVisible(false);
+
+                //Create node drag operation
+                DragContainer container
+                        = (DragContainer) event.getDragboard().getContent(DragContainer.AddNode);
+
+                if (container != null) {
+                    if (container.getValue("scene_coords") != null) {
+                        /*
+						if (container.getValue("type").equals(DragIconType.cubic_curve.toString())) {
+							CubicCurveDemo curve = new CubicCurveDemo();
+							
+							right_pane.getChildren().add(curve);
+							
+							Point2D cursorPoint = container.getValue("scene_coords");
+
+							curve.relocateToPoint(
+									new Point2D(cursorPoint.getX() - 32, cursorPoint.getY() - 32)
+									);							
+						}
+						else {*/
+
+                        DraggableNode node = new DraggableNode(RootLayout.this);
+
+                        node.setType(DragIconType.valueOf(container.getValue("type")));
+
+                        right_pane.getChildren().add(node);
+
+                        Point2D cursorPoint = container.getValue("scene_coords");
+
+                        node.relocateToPoint(
+                                new Point2D(cursorPoint.getX() - 32, cursorPoint.getY() - 32)
+                        );
+
+                    }
+                }
+           }
+        });

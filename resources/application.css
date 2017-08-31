@@ -1,0 +1,70 @@
+.dragicon {
+	-fx-background-radius: 10; 
+}
+
+
+.input {
+	-fx-background-color: red;
+        -fx-background-image:url('input.png');
+}
+
+.var_const {
+	-fx-background-color: green;
+        -fx-background-image:url('var_const.png');
+}
+
+.condition {
+	-fx-background-color: blue;
+        -fx-background-image:url('condition.png');
+}
+
+.elsee {
+	-fx-background-color: lightblue;
+        -fx-background-image:url('elsee.png');
+}
+
+.loop {
+	-fx-background-color: black;
+        -fx-background-image:url('loop.png');
+}
+
+.arithmetic {
+	-fx-background-color: yellow;
+        -fx-background-image:url('arithmetic.png');
+}
+
+.output {
+	-fx-background-color: orange;
+        -fx-background-image:url('output.png');
+}
+
+
+
+
+.input2 {
+	-fx-background-color: red;
+}
+
+.var_const2 {
+	-fx-background-color: green;
+}
+
+.condition2 {
+	-fx-background-color: blue;
+}
+
+.elsee2 {
+	-fx-background-color: lightblue;
+}
+
+.loop2 {
+	-fx-background-color: black;
+}
+
+.arithmetic2 {
+	-fx-background-color: yellow;
+}
+
+.output2 {
+	-fx-background-color: orange;
+}
